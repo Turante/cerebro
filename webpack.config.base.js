@@ -15,7 +15,7 @@ module.exports = {
       test: /\.jsx?$/,
       use: 'babel-loader',
       exclude: (modulePath) => (
-        modulePath.match(/node_modules/) && !modulePath.match(/node_modules(\/|\\)@devmedoo\/cerebro-ui/)
+        modulePath.match(/node_modules/) && !modulePath.match(/node_modules(\/|\\)@devmedoo(\/|\\)cerebro-ui/)
       )
     }, {
       test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
