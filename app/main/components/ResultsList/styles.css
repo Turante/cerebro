@@ -22,10 +22,10 @@
   padding: 10px 10px 20px 10px;
   background-color: var(--main-background-color);
   align-items: center;
-  display: flex;
+  /* display: flex; */
   max-height: 100%;
   position: absolute;
-  left: 250px;
+  left: 200px;
   top: 0;
   bottom: 0;
   right: 0;
