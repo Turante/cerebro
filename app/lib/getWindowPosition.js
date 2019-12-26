@@ -27,7 +27,15 @@ export default ({ width, heightWithResults }) => {
     ? heightWithResults
     : MIN_VISIBLE_RESULTS * RESULT_HEIGHT + INPUT_HEIGHT
 
-  const { screen } = require('electron').remote
+
+
+  let screen = require('electron')["screen"];
+
+  if (typeof screen == "undefined"){
+    screen = require('electron').remote["screen"]
+  }
+
+
   const display = screen.getPrimaryDisplay()
   const positions = config.get('positions') || {}
 

@@ -14,7 +14,6 @@ import handleUrl from './createWindow/handleUrl'
 import config from '../lib/config'
 import getWindowPosition from '../lib/getWindowPosition'
 
-
 export default ({ src, isDev }) => {
   const [x, y] = getWindowPosition({})
 
@@ -40,6 +39,7 @@ export default ({ src, isDev }) => {
 
   const mainWindow = new BrowserWindow(browserWindowOptions)
   if (process.env.NODE_ENV === 'development' || config.get('developerMode')) {
+    BrowserWindow.addDevToolsExtension('C:\\Users\\ilukinov\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\fmkadmapgofadopljbjfkapdkoienihi\\4.2.0_0')
     mainWindow.webContents.openDevTools()
   }
 
