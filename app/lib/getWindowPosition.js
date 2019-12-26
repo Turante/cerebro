@@ -1,4 +1,3 @@
-import { screen } from 'electron'
 import config from './config'
 
 import {
@@ -28,6 +27,7 @@ export default ({ width, heightWithResults }) => {
     ? heightWithResults
     : MIN_VISIBLE_RESULTS * RESULT_HEIGHT + INPUT_HEIGHT
 
+  const { screen } = require('electron').remote
   const display = screen.getPrimaryDisplay()
   const positions = config.get('positions') || {}
 
@@ -49,7 +49,7 @@ export default ({ width, heightWithResults }) => {
       return [x, y]
     }
   }
-
+  console.log(screen);
   const x = parseInt(display.bounds.x + (display.workAreaSize.width - winWidth) / 2, 10)
   const y = parseInt(display.bounds.y + (display.workAreaSize.height - winHeight) / 2, 10)
   return [x, y]
