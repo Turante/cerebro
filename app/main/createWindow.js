@@ -13,6 +13,7 @@ import toggleWindow from './createWindow/toggleWindow'
 import handleUrl from './createWindow/handleUrl'
 import config from '../lib/config'
 import getWindowPosition from '../lib/getWindowPosition'
+let windowManager = require('electron-window-manager');
 
 export default ({ src, isDev }) => {
   const [x, y] = getWindowPosition({})
@@ -25,6 +26,7 @@ export default ({ src, isDev }) => {
     y,
     frame: false,
     resizable: false,
+    alwaysOnTop: true,
     // Show main window on launch only when application started for the first time
     show: config.get('firstStart'),
     webPreferences: {
@@ -37,17 +39,21 @@ export default ({ src, isDev }) => {
     browserWindowOptions.type = 'splash'
   }
 
-  const mainWindow = new BrowserWindow(browserWindowOptions)
-  if (process.env.NODE_ENV === 'development' || config.get('developerMode')) {
-    BrowserWindow.addDevToolsExtension('C:\\Users\\ilukinov\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\fmkadmapgofadopljbjfkapdkoienihi\\4.2.0_0')
-    mainWindow.webContents.openDevTools()
-  }
+  // const mainWindow = new BrowserWindow(browserWindowOptions)
 
+  const homeWindow = windowManager.createNew('main', 'Welcome ...', src, false, browserWindowOptions, true);
+  homeWindow.open()
+  const mainWindow = homeWindow.object
+  console.log(mainWindow)
+  // if (process.env.NODE_ENV === 'development' || config.get('developerMode')) {
+    // mainWindow.addDevToolsExtension('C:\\Users\\ilukinov\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\fmkadmapgofadopljbjfkapdkoienihi\\4.2.0_0')
+    // mainWindow.webContents.openDevTools()
+  // }
 
   // Float main window above full-screen apps
-  mainWindow.setAlwaysOnTop(true, 'modal-panel')
+  // mainWindow.setAlwaysOnTop(true, 'modal-panel')
 
-  mainWindow.loadURL(src)
+  // mainWindow.loadURL(src)
   mainWindow.settingsChanges = new EventEmitter()
 
   // Get global shortcut from app settings
@@ -74,12 +80,12 @@ export default ({ src, isDev }) => {
 
   // Save window position when it is being moved
   mainWindow.on('move', debounce(() => {
-    if (!mainWindow.isVisible()) {
+    if (!mainWindow.BrowserWindow.isVisible()) {
       return
     }
     const display = screen.getPrimaryDisplay()
     const positions = config.get('positions') || {}
-    positions[display.id] = mainWindow.getPosition()
+    positions[display.id] = mainWindow.BrowserWindow.getPosition()
     config.set('positions', positions)
   }, 100))
 
