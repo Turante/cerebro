@@ -20,7 +20,9 @@
     "package": "yarn run build && electron-builder --publish never",
     "release": "electron-builder -mwl",
     "dev": "concurrently --kill-others \"yarn run hot-server\" \"yarn run start-hot\"",
-    "postinstall": "concurrently \"node node_modules/fbjs-scripts/node/check-dev-engines.js package.json\""
+    "postinstall": "concurrently \"node node_modules/fbjs-scripts/node/check-dev-engines.js package.json\"",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "build": {
     "productName": "Cerebro",
@@ -196,16 +198,16 @@
     "@devmedoo/cerebro-ui": "0.0.19",
     "electron-debug": "^3.0.1",
     "escape-string-regexp": "1.0.5",
-    "fix-path": "2.1.0",
-    "lodash": "^4.17.4",
+    "fix-path": "4.0.0",
+    "lodash": "^4.17.21",
     "mv": "^2.1.1",
     "node-machine-id": "^1.1.8",
     "normalize.css": "^7.0.0",
-    "postcss": "^6.0.6",
-    "react": "^15.6.1",
+    "postcss": "^7.0.36",
+    "react": "^16.5.0",
     "react-addons-css-transition-group": "^15.6.0",
-    "react-addons-shallow-compare": "^15.6.0",
-    "react-dom": "^15.6.1",
+    "react-addons-shallow-compare": "^15.6.3",
+    "react-dom": "^16.5.0",
     "react-input-autosize": "^1.1.0",
     "react-markdown": "^2.5.0",
     "react-redux": "^5.0.5",
@@ -214,9 +216,11 @@
     "redux": "^3.7.1",
     "redux-thunk": "^2.2.0",
     "source-map-support": "^0.4.15",
-    "tar-fs": "1.15.0"
+    "tar-fs": "1.16.2",
+    "@snyk/protect": "latest"
   },
   "devEngines": {
     "node": ">=8 <12"
-  }
+  },
+  "snyk": true
 }
