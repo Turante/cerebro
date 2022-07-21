@@ -210,7 +210,7 @@
     "react-dom": "^15.6.1",
     "react-input-autosize": "^1.1.0",
     "react-markdown": "^2.5.0",
-    "react-redux": "^5.0.5",
+    "react-redux": "^5.1.2",
     "react-select": "^1.0.0-rc.2",
     "react-virtualized": "https://registry.npmjs.org/react-virtualized/-/react-virtualized-7.11.8.tgz",
     "redux": "^3.7.1",
