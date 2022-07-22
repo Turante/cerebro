@@ -1252,7 +1252,7 @@ babel-register@^6.24.1:
     mkdirp "^0.5.1"
     source-map-support "^0.4.2"
 
-babel-runtime@^6.18.0, babel-runtime@^6.26.0:
+babel-runtime@^6.11.6, babel-runtime@^6.18.0, babel-runtime@^6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   integrity sha1-llxwWGaOgrVde/4E/yM3vItWR/4=
@@ -6719,10 +6719,12 @@ react-transition-group@^1.2.0:
     prop-types "^15.5.6"
     warning "^3.0.0"
 
-"react-virtualized@https://registry.npmjs.org/react-virtualized/-/react-virtualized-7.11.8.tgz":
-  version "7.11.8"
-  resolved "https://registry.npmjs.org/react-virtualized/-/react-virtualized-7.11.8.tgz#cdbe00f224b2a982ea50eb1fb18a985ba1101f06"
+react-virtualized@7.24.3:
+  version "7.24.3"
+  resolved "https://registry.yarnpkg.com/react-virtualized/-/react-virtualized-7.24.3.tgz#b9b1b20568339e66e7b6908e92ff6b55309253b7"
+  integrity sha512-++mLAmSpKaIUr1xA8xPdPYvmHvkMzpNKeTWkFPUXB19ojYRxkoRKh7YK2GbsAy7rQjjoM75NLtDt8eq7ypPmgQ==
   dependencies:
+    babel-runtime "^6.11.6"
     classnames "^2.2.3"
     dom-helpers "^2.4.0"
     raf "^3.1.0"
