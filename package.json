@@ -173,7 +173,7 @@
     "jsdom": "^16.5.0",
     "json-loader": "0.5.4",
     "lodash-webpack-plugin": "^0.11.4",
-    "minimist": "1.2.0",
+    "minimist": "1.2.6",
     "mocha": "^3.4.2",
     "mocha-webpack": "0.7.0",
     "node-libs-browser": "2.0.0",
