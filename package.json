@@ -214,7 +214,7 @@
     "react-select": "^1.0.0-rc.2",
     "react-virtualized": "7.24.3",
     "redux": "^3.7.1",
-    "redux-thunk": "^2.2.0",
+    "redux-thunk": "^2.4.1",
     "source-map-support": "^0.5.21",
     "tar-fs": "1.15.0",
     "@snyk/protect": "latest"
