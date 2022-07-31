@@ -193,7 +193,7 @@
     "webpack-visualizer-plugin": "^0.1.11"
   },
   "dependencies": {
-    "auto-launch": "^5.0.1",
+    "auto-launch": "^5.0.5",
     "cerebro-tools": "0.1.8",
     "@devmedoo/cerebro-ui": "0.0.19",
     "electron-debug": "^3.0.1",
