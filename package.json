@@ -203,7 +203,7 @@
     "mv": "^2.1.1",
     "node-machine-id": "^1.1.12",
     "normalize.css": "^7.0.0",
-    "postcss": "^6.0.6",
+    "postcss": "^8.4.31",
     "react": "^15.6.1",
     "react-addons-css-transition-group": "^15.6.0",
     "react-addons-shallow-compare": "^15.6.0",
