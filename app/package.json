@@ -14,7 +14,7 @@
     "rebuild": "npm rebuild --runtime=electron --target=6.0.3 --disturl=https://atom.io/download/electron --abi=67"
   },
   "dependencies": {
-    "chokidar": "^3.0.2",
+    "chokidar": "^4.0.0",
     "electron-updater": "^4.6.5",
     "rmdir": "^1.2.0",
     "semver": "^5.7.1",
