@@ -199,7 +199,7 @@
     "electron-debug": "^3.0.1",
     "escape-string-regexp": "1.0.5",
     "fix-path": "2.1.0",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.23",
     "mv": "^2.1.1",
     "node-machine-id": "^1.1.12",
     "normalize.css": "^7.0.0",
