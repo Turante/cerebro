@@ -18,7 +18,7 @@
     "electron-updater": "^4.6.5",
     "rmdir": "^1.2.0",
     "semver": "^5.7.1",
-    "universal-analytics": "^0.4.8"
+    "universal-analytics": "^0.4.21"
   },
   "optionalDependencies": {},
   "devDependencies": {}
